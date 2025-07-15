@@ -1,11 +1,11 @@
 
-# 🎓 GPA & CGPA Calculator – Anna University (ECE, 2021 Regulation)
+# GPA & CGPA Calculator – Anna University (ECE, 2021 Regulation)
 
 This Flutter application allows students of **Electronics and Communication Engineering (ECE)** under **Anna University 2021 Regulation** to calculate their **Semester GPA** and **overall CGPA** easily.
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```bash
 
@@ -13,7 +13,7 @@ lib/
 │
 ├── Calculations/
 │   ├── calculatePage.dart      # Shared GPA calculation logic and UI
-│   └── cgpa\_calculate.dart     # CGPA calculator with credit-weighted logic
+│   └── cgpa_calculate.dart     # CGPA calculator with credit-weighted logic
 │
 ├── Models/
 │   └── subjects.dart           # Subject model class (name, credits, grade)
@@ -35,43 +35,43 @@ lib/
 
 ---
 
-## 📱 Features
+## Features
 
-- ✅ GPA calculator for **all 8 semesters**, with predefined subjects and credits.
-- ✅ Dropdown to select grades (O, A+, A, B+, B, RA, SA, WH).
-- ✅ Centralized GPA logic using a **shared calculator page**.
-- ✅ CGPA calculator with automatic credit mapping based on selected semester count.
-- ✅ Clean UI with dynamic GPA/CGPA entry and reset options.
+- GPA calculator for **all 8 semesters**, with predefined subjects and credits.
+- Dropdown to select grades (O, A+, A, B+, B, RA, SA, WH).
+- Centralized GPA logic using a **shared calculator page**.
+- CGPA calculator with automatic credit mapping based on selected semester count.
+- Clean UI with dynamic GPA/CGPA entry and reset options.
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
-### 🧮 GPA Calculation
+### GPA Calculation
 - Each semester page passes a list of `Subject` objects (`name`, `credits`, `grade`) to `calculatePage.dart`.
 - GPA is calculated as:
 ```bash
-  \[
+  [
   GPA = \frac{\sum(\text{Grade Point} \times \text{Credit})}{\sum(\text{Credits})}
-  \]
+  ]
 ```
-### 📊 CGPA Calculation
+### CGPA Calculation
 - The user selects the **number of semesters completed**.
 - App knows the **fixed credit values** for each semester:
 ```
 
-\[22, 26, 25, 22, 21, 20, 16, 10]
+[22, 26, 25, 22, 21, 20, 16, 10]
 
 ````
 - CGPA is computed as:
 ```bash
-\[
+[
 CGPA = \frac{\sum(\text{Semester GPA} \times \text{Credits})}{\sum(\text{Credits})}
-\]
+]
 ```
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone this repo:
 ```bash
@@ -85,24 +85,15 @@ cd gpa-calculator
 flutter pub get
 flutter run
 ```
-
 ---
 
-## 📸 Screenshots
+## Developer Info
 
-* 🧮 GPA Calculator per semester
-* 📊 CGPA Calculator (dynamic semester selection)
-* 🎯 Simple and student-friendly UI
-
----
-
-## 📌 Developer Info
-
-* 💻 **Developer**: Sanjay R
-* 🎓 **Dept**: Electronics & Communication Engineering (ECE)
-* 🏛️ **University**: Anna University (2021 Regulation)
-* 🔗 [LinkedIn](https://www.linkedin.com/in/sanjayrameshr)
-* 🐙 [GitHub](https://github.com/sanjayrameshr)
+* **Developer**: Sanjay R
+* **Dept**: Electronics & Communication Engineering (ECE)
+* **University**: Anna University (2021 Regulation)
+* [LinkedIn](https://www.linkedin.com/in/sanjayrameshr)
+* [GitHub](https://github.com/sanjayrameshr)
 
 ---
 
@@ -110,9 +101,3 @@ flutter run
 
 This project is for educational purposes and open for contributions. Attribution appreciated 🙌.
 
-```
-
----
-
-Would you like a downloadable `README.md` file or want this added directly into your Flutter project root?
-```
