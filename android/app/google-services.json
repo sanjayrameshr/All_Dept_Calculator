@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "67174920718",
+    "project_id": "au-gpa-cgpa",
+    "storage_bucket": "au-gpa-cgpa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67174920718:android:4ccf861b41a55b9f61025f",
+        "android_client_info": {
+          "package_name": "com.example.au_cgpa_gpa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1HFeL2AsEmS7T1lEnI5y2mR6uGqP0eVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
