@@ -11,20 +11,6 @@ import 'Pages/Sem7.dart';
 import 'Pages/Sem8.dart';
 import 'Calculations/cgpa_calculate.dart';
 
-// Dummy classes for demonstration if actual files are not yet created.
-// Uncomment and use these if you haven't created the actual files yet.
-/*
-class Sem1GPA extends StatelessWidget { const Sem1GPA({super.key}); @override Widget build(BuildContext context) { return Scaffold(appBar: AppBar(title: const Text('Semester 1 GPA')), body: const Center(child: Text('Semester 1 GPA Page'))); } }
-class Sem2GPA extends StatelessWidget { const Sem2GPA({super.key}); @override Widget build(BuildContext context) { return Scaffold(appBar: AppBar(title: const Text('Semester 2 GPA')), body: const Center(child: Text('Semester 2 GPA Page'))); } }
-class Sem3GPA extends StatelessWidget { const Sem3GPA({super.key}); @override Widget build(BuildContext context) { return Scaffold(appBar: AppBar(title: const Text('Semester 3 GPA')), body: const Center(child: Text('Semester 3 GPA Page'))); } }
-class Sem4GPA extends StatelessWidget { const Sem4GPA({super.key}); @override Widget build(BuildContext context) { return Scaffold(appBar: AppBar(title: const Text('Semester 4 GPA')), body: const Center(child: Text('Semester 4 GPA Page'))); } }
-class Sem5GPA extends StatelessWidget { const Sem5GPA({super.key}); @override Widget build(BuildContext context) { return Scaffold(appBar: AppBar(title: const Text('Semester 5 GPA')), body: const Center(child: Text('Semester 5 GPA Page'))); } }
-class Sem6GPA extends StatelessWidget { const Sem6GPA({super.key}); @override Widget build(BuildContext context) { return Scaffold(appBar: AppBar(title: const Text('Semester 6 GPA')), body: const Center(child: Text('Semester 6 GPA Page'))); } }
-class Sem7GPA extends StatelessWidget { const Sem7GPA({super.key}); @override Widget build(BuildContext context) { return Scaffold(appBar: AppBar(title: const Text('Semester 7 GPA')), body: const Center(child: Text('Semester 7 GPA Page'))); } }
-class Sem8GPA extends StatelessWidget { const Sem8GPA({super.key}); @override Widget build(BuildContext context) { return Scaffold(appBar: AppBar(title: const Text('Semester 8 GPA')), body: const Center(child: Text('Semester 8 GPA Page'))); } }
-class CGPACalculatorPage extends StatelessWidget { const CGPACalculatorPage({super.key}); @override Widget build(BuildContext context) { return Scaffold(appBar: AppBar(title: const Text('CGPA Calculator')), body: const Center(child: Text('CGPA Calculator Page'))); } }
-*/
-
 // Enum to represent the eight semesters
 enum Semester { One, Two, Three, Four, Five, Six, Seven, Eight }
 
@@ -54,7 +40,7 @@ class HomePage extends StatelessWidget {
               color: Colors.deepPurple, // Custom color for this heading
             ),
           ),
-          const SizedBox(height: 20), // Space after the heading
+          const SizedBox(height: 10), // Space after the heading
 
           // Loop through all semesters to create a card for each
           for (int i = 1; i <= Semester.values.length; i++)
