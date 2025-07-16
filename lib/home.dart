@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'Semester_Pages/Sem1.dart';
-import 'Semester_Pages/Sem2.dart';
-import 'Semester_Pages/Sem3.dart';
-import 'Semester_Pages/Sem4.dart';
-import 'Semester_Pages/Sem5.dart';
-import 'Semester_Pages/Sem6.dart';
-import 'Semester_Pages/Sem7.dart';
-import 'Semester_Pages/Sem8.dart';
+import 'Pages/Sem1.dart';
+import 'Pages/Sem2.dart';
+import 'Pages/Sem3.dart';
+import 'Pages/Sem4.dart';
+import 'Pages/Sem5.dart';
+import 'Pages/Sem6.dart';
+import 'Pages/Sem7.dart';
+import 'Pages/Sem8.dart';
 import 'Calculations/cgpa_calculate.dart';
 
 enum Semester { One, Two, Three, Four, Five, Six, Seven, Eight }
