@@ -166,7 +166,7 @@ class _CalculatePageState extends State<CalculatePage> {
                   Text(
                     gpa.toStringAsFixed(2),
                     style: const TextStyle(
-                      fontSize: 48,
+                      fontSize: 28,
                       fontWeight: FontWeight.w900,
                       color: Colors.blueAccent,
                     ),
