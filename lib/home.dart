@@ -1,14 +1,6 @@
+import 'package:au_cgpa_gpa/Pages/semester_page.dart';
+import 'package:au_cgpa_gpa/data/mock_data/data.dart';
 import 'package:flutter/material.dart';
-
-// Import your semester pages and CGPA calculator page
-import 'Pages/Sem1.dart';
-import 'Pages/Sem2.dart';
-import 'Pages/Sem3.dart';
-import 'Pages/Sem4.dart';
-import 'Pages/Sem5.dart';
-import 'Pages/Sem6.dart';
-import 'Pages/Sem7.dart';
-import 'Pages/Sem8.dart';
 import 'Calculations/cgpa_calculate.dart';
 
 // Enum to represent the eight semesters
@@ -75,7 +67,10 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Sem1GPA(), // Navigate to Sem1GPA page
+                            builder: (context) => SemesterPage(
+                              subjects: SemData().sem1Subjects, // Fetch subjects for Semester 1
+                              title: "Semester 1 GPA Calculator",
+                            ),
                           ),
                         );
                         break;
@@ -83,7 +78,10 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Sem2GPA(), // Navigate to Sem2GPA page
+                            builder: (context) => SemesterPage(
+                              subjects: SemData().sem2Subjects, // Fetch subjects for Semester 2
+                              title: "Semester 2 GPA Calculator",
+                            ),
                           ),
                         );
                         break;
@@ -91,7 +89,10 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Sem3GPA(), // Navigate to Sem3GPA page
+                            builder: (context) => SemesterPage(
+                              subjects: SemData().sem3Subjects, // Fetch subjects for Semester 3
+                              title: "Semester 3 GPA Calculator",
+                            ),
                           ),
                         );
                         break;
@@ -99,7 +100,10 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Sem4GPA(), // Navigate to Sem4GPA page
+                            builder: (context) => SemesterPage(
+                              subjects: SemData().sem4Subjects, // Fetch subjects for Semester 4
+                              title: "Semester 4 GPA Calculator",
+                            ),
                           ),
                         );
                         break;
@@ -107,7 +111,10 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Sem5GPA(), // Navigate to Sem5GPA page
+                            builder: (context) => SemesterPage(
+                              subjects: SemData().sem5Subjects, // Fetch subjects for Semester 5
+                              title: "Semester 5 GPA Calculator",
+                            ),
                           ),
                         );
                         break;
@@ -115,7 +122,10 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Sem6GPA(), // Navigate to Sem6GPA page
+                            builder: (context) => SemesterPage(
+                              subjects: SemData().sem6Subjects, // Fetch subjects for Semester 6
+                              title: "Semester 6 GPA Calculator",
+                            ),
                           ),
                         );
                         break;
@@ -123,7 +133,10 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Sem7GPA(), // Navigate to Sem7GPA page
+                            builder: (context) => SemesterPage(
+                              subjects: SemData().sem7Subjects, // Fetch subjects for Semester 7
+                              title: "Semester 7 GPA Calculator",
+                            ),
                           ),
                         );
                         break;
@@ -131,7 +144,10 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Sem8GPA(), // Navigate to Sem8GPA page
+                            builder: (context) => SemesterPage(
+                              subjects: SemData().sem8Subjects, // Fetch subjects for Semester 8
+                              title: "Semester 8 GPA Calculator",
+                            ),
                           ),
                         );
                         break;
