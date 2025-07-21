@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart'; // Make sure this path is correct for your home page file
+import 'home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,17 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Hides the debug banner
-      title: 'GPA Calculator', // Title for the app
+      debugShowCheckedModeBanner: false, 
+      title: 'GPA Calculator', 
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple, // Sets the primary color for the app
+        primarySwatch: Colors.deepPurple, 
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.deepPurple, // Consistent app bar color
-          foregroundColor: Colors.white, // Text color for app bar
+          foregroundColor: Colors.white, 
         ),
-        visualDensity: VisualDensity.adaptivePlatformDensity, // Adapts UI to platform
+        visualDensity: VisualDensity.adaptivePlatformDensity, 
       ),
-      home: const HomePage(), // Sets HomePage as the initial screen
+      home: const HomePage(),
     );
   }
 }
