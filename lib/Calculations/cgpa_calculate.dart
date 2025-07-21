@@ -247,7 +247,7 @@ class _CGPACalculatorPageState extends State<CGPACalculatorPage> {
                   Text(
                     cgpa.toStringAsFixed(2),
                     style: const TextStyle(
-                      fontSize: 60,
+                      fontSize: 30,
                       fontWeight: FontWeight.w900,
                       color: Colors.deepPurple,
                     ),
