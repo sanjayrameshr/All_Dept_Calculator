@@ -1,4 +1,4 @@
-import '../../Models/subjects.dart';
+import '../data/subject.dart';
 class SemData {
   final List<Subject> sem1Subjects = [
     Subject(name: 'Professional English - I', credit: 3),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Models/subjects.dart';
-import '../calculations/calculatePage.dart';
+import 'calculate_page.dart';
+import '../data/subject.dart';
 
 class SemesterPage extends StatelessWidget {
   final List<Subject> subjects;
