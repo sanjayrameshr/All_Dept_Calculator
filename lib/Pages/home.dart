@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'pages/cgpa_page.dart';
-import 'pages/semester_page.dart';
-import 'data/semester_details.dart';
+import 'cgpa_page.dart';
+import 'semester_page.dart';
+import '../data/semester_details.dart';
 
 // Enum to represent the eight semesters
 enum Semester { One, Two, Three, Four, Five, Six, Seven, Eight }
