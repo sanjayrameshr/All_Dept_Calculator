@@ -78,6 +78,7 @@ class _GpaCalculatorPageState extends State<GpaCalculatorPage> {
                               children: [
                                 Text(
                                   subject.name,
+
                                   style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w600,
@@ -88,6 +89,11 @@ class _GpaCalculatorPageState extends State<GpaCalculatorPage> {
                                   '${subject.credit} credits',
                                   style: TextStyle(
                                       fontSize: 14, color: Colors.grey[600]),
+                                ),
+                                Text(
+                                  subject.code,
+                                  style: const TextStyle(
+                                      fontSize: 14, color: Colors.grey),
                                 ),
                               ],
                             ),

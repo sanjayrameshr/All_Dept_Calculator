@@ -3,6 +3,7 @@ import 'cgpa_page.dart';
 import 'semester_page.dart';
 import '../data/semester_details.dart';
 
+
 // Enum to represent the eight semesters
 enum Semester { One, Two, Three, Four, Five, Six, Seven, Eight }
 
@@ -11,6 +12,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // I Initialize the semester data to be reduce the use of constructor
+    // and to avoid passing data through constructors.
+    final semData = SemData();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -18,36 +23,37 @@ class HomePage extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        backgroundColor: Theme.of(context).primaryColor, // Uses the primary color from main.dart's theme
-        foregroundColor: Colors.white, // Ensures text is white for contrast
+        backgroundColor: Theme.of(context).primaryColor, 
+        foregroundColor: Colors.white, 
       ),
       body: ListView(
-        padding: const EdgeInsets.all(16.0), // Padding around the entire list
+        padding: const EdgeInsets.all(16.0), 
         children: [
           const Text(
             'Select Semester:',
             style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
-              color: Colors.deepPurple, // Custom color for this heading
+              color: Colors.deepPurple, 
             ),
           ),
-          const SizedBox(height: 10), // Space after the heading
+          const SizedBox(height: 10), 
 
-          // Loop through all semesters to create a card for each
+// Loops for each semester to create a card
+
           for (int i = 1; i <= Semester.values.length; i++)
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0), // Vertical padding between cards
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: Card(
-                elevation: 4, // Adds a shadow effect to the card
+                elevation: 4, 
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12), // Rounded corners for the card
+                  borderRadius: BorderRadius.circular(12), 
                 ),
                 child: ListTile(
                   contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 20, vertical: 10), // Padding inside the ListTile
+                      horizontal: 20, vertical: 10), 
                   leading: _getSemesterIcon(
-                      Semester.values[i - 1]), // Dynamic icon based on semester
+                      Semester.values[i - 1]),
                   title: Text(
                     'Semester ${Semester.values[i - 1].name}',
                     style: const TextStyle(
@@ -56,19 +62,21 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   trailing: const Icon(
-                    Icons.arrow_forward_ios, // Arrow icon on the right
+                    Icons.arrow_forward_ios, 
                     color: Colors.grey,
                     size: 20,
                   ),
                   onTap: () {
-                    // Navigation logic based on the selected semester
+
+          // Here i used Navigate to the SemesterPage with the corresponding subjects
+
                     switch (Semester.values[i - 1]) {
                       case Semester.One:
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => SemesterPage(
-                              subjects: SemData().sem1Subjects, // Fetch subjects for Semester 1
+                              subjects: semData.sem1Subjects, 
                               title: "Semester 1 GPA Calculator",
                             ),
                           ),
@@ -79,7 +87,7 @@ class HomePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => SemesterPage(
-                              subjects: SemData().sem2Subjects, // Fetch subjects for Semester 2
+                              subjects: semData.sem2Subjects, 
                               title: "Semester 2 GPA Calculator",
                             ),
                           ),
@@ -90,7 +98,7 @@ class HomePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => SemesterPage(
-                              subjects: SemData().sem3Subjects, // Fetch subjects for Semester 3
+                              subjects: semData.sem3Subjects, 
                               title: "Semester 3 GPA Calculator",
                             ),
                           ),
@@ -101,7 +109,7 @@ class HomePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => SemesterPage(
-                              subjects: SemData().sem4Subjects, // Fetch subjects for Semester 4
+                              subjects: semData.sem4Subjects, 
                               title: "Semester 4 GPA Calculator",
                             ),
                           ),
@@ -112,7 +120,7 @@ class HomePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => SemesterPage(
-                              subjects: SemData().sem5Subjects, // Fetch subjects for Semester 5
+                              subjects: semData.sem5Subjects, 
                               title: "Semester 5 GPA Calculator",
                             ),
                           ),
@@ -123,7 +131,7 @@ class HomePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => SemesterPage(
-                              subjects: SemData().sem6Subjects, // Fetch subjects for Semester 6
+                              subjects: semData.sem6Subjects,
                               title: "Semester 6 GPA Calculator",
                             ),
                           ),
@@ -134,7 +142,7 @@ class HomePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => SemesterPage(
-                              subjects: SemData().sem7Subjects, // Fetch subjects for Semester 7
+                              subjects: semData.sem7Subjects,
                               title: "Semester 7 GPA Calculator",
                             ),
                           ),
@@ -145,7 +153,7 @@ class HomePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => SemesterPage(
-                              subjects: SemData().sem8Subjects, // Fetch subjects for Semester 8
+                              subjects: semData.sem8Subjects,
                               title: "Semester 8 GPA Calculator",
                             ),
                           ),
@@ -156,37 +164,39 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-          const SizedBox(height: 30), // More space before the CGPA button
-          const Divider(thickness: 2, height: 40), // A prominent divider
+          const SizedBox(height: 30), 
+          const Divider(thickness: 2, height: 40),
           ElevatedButton.icon(
             onPressed: () {
-              // Navigate to the CGPA Calculator page
+
+    // Navigate to the CGPA Calculator Page
+              // This button is used to calculate the overall CGPA
+
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => CgpaCalculatorPage()),
               );
             },
-            icon: const Icon(Icons.calculate, size: 28), // Calculator icon
+            icon: const Icon(Icons.calculate, size: 28),
             label: const Text(
               'Calculate Overall CGPA',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             style: ElevatedButton.styleFrom(
-              minimumSize: const Size.fromHeight(60), // Makes the button taller
-              backgroundColor: Colors.green, // Distinct background color for the button
-              foregroundColor: Colors.white, // Text color for the button
+              minimumSize: const Size.fromHeight(60), 
+              backgroundColor: Colors.green, 
+              foregroundColor: Colors.white, 
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12), // Rounded corners for the button
+                borderRadius: BorderRadius.circular(12),
               ),
-              elevation: 5, // Shadow for the button
+              elevation: 5,
             ),
           ),
         ],
       ),
     );
   }
-
-  // Helper function to return a specific icon for each semester
+// Helper function to return a specific icon for each semester
   Icon _getSemesterIcon(Semester semester) {
     switch (semester) {
       case Semester.One:
