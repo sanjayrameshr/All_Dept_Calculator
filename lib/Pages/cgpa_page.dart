@@ -9,7 +9,7 @@ class CgpaCalculatorPage extends StatefulWidget {
 class _CgpaCalculatorPageState extends State<CgpaCalculatorPage> {
   final List<TextEditingController> gpaControllers = [];
   int selectedSemesters = 0;
-  double cgpa = 0.0;
+  double cgpa = 0.0;      
 
   @override
   void dispose() {
@@ -213,41 +213,42 @@ class _CgpaCalculatorPageState extends State<CgpaCalculatorPage> {
             const SizedBox(height: 20),
 
             // CGPA Display Area
-            Container(
-              padding: const EdgeInsets.all(20.0),
-              margin: const EdgeInsets.only(bottom: 20.0),
-              decoration: BoxDecoration(
-                color: Colors.deepPurple.shade50,
-                borderRadius: BorderRadius.circular(18.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.deepPurple.shade100.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 7,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
+            if (cgpa > 0.0)
+              Container(
+                padding: const EdgeInsets.all(10.0),
+                margin: const EdgeInsets.only(bottom: 15.0),
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple.shade50,
+                  borderRadius: BorderRadius.circular(18.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.deepPurple.shade100.withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 7,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      'Your Overall CGPA:',
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.grey[700],
+                          fontWeight: FontWeight.w500),
+                    ),
+                    const SizedBox(height: 10),
+                    Text(
+                      cgpa.toStringAsFixed(2),
+                      style: const TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.deepPurple),
+                    ),
+                  ],
+                ),
               ),
-              child: Column(
-                children: [
-                  Text(
-                    'Your Overall CGPA:',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.grey[700],
-                        fontWeight: FontWeight.w500),
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    cgpa.toStringAsFixed(2),
-                    style: const TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w900,
-                        color: Colors.deepPurple),
-                  ),
-                ],
-              ),
-            ),
 
             // Action Buttons
             Row(
