@@ -1,5 +1,5 @@
+import '../pages/gpa_page.dart';
 import 'package:flutter/material.dart';
-import 'calculate_page.dart';
 import '../data/subject.dart';
 
 class SemesterPage extends StatelessWidget {
@@ -10,6 +10,6 @@ class SemesterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CalculatePage(subjects: subjects, title: title);
+    return GpaCalculatorPage(subjects: subjects, title: title);
   }
 }

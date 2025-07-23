@@ -163,7 +163,7 @@ class HomePage extends StatelessWidget {
               // Navigate to the CGPA Calculator page
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CGPACalculatorPage()),
+                MaterialPageRoute(builder: (context) => CgpaCalculatorPage()),
               );
             },
             icon: const Icon(Icons.calculate, size: 28), // Calculator icon

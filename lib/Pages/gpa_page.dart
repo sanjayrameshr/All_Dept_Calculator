@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import '../data/subject.dart';
 import '../Calculations/gpa_calculator.dart';
 
-class CalculatePage extends StatefulWidget {
+class GpaCalculatorPage extends StatefulWidget {
   final List<Subject> subjects;
   final String title;
 
-  CalculatePage({super.key, required this.subjects, required this.title});
+  GpaCalculatorPage({super.key, required this.subjects, required this.title});
 
   @override
-  _CalculatePageState createState() => _CalculatePageState();
+  _GpaCalculatorPageState createState() => _GpaCalculatorPageState();
 }
 
-class _CalculatePageState extends State<CalculatePage> {
+class _GpaCalculatorPageState extends State<GpaCalculatorPage> {
   double? gpa;
 
   void calculateGPA() {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../Calculations/cgpa_calculate.dart';
 
-class CGPACalculatorPage extends StatefulWidget {
+class CgpaCalculatorPage extends StatefulWidget {
   @override
-  _CGPACalculatorPageState createState() => _CGPACalculatorPageState();
+  _CgpaCalculatorPageState createState() => _CgpaCalculatorPageState();
 }
 
-class _CGPACalculatorPageState extends State<CGPACalculatorPage> {
+class _CgpaCalculatorPageState extends State<CgpaCalculatorPage> {
   final List<TextEditingController> gpaControllers = [];
   int selectedSemesters = 0;
   double cgpa = 0.0;
