@@ -1,5 +1,3 @@
-// lib/semester_selection_page.dart
-
 import 'package:flutter/material.dart';
 import 'cgpa_page.dart';
 import 'semester_page.dart';
@@ -83,31 +81,7 @@ class SemesterSelectionPage extends StatelessWidget {
                 ),
               ),
             ),
-          const SizedBox(height: 30),
-          const Divider(thickness: 2, height: 40),
-          // The CGPA button can remain here or be moved.
-          ElevatedButton.icon(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => CgpaCalculatorPage()),
-              );
-            },
-            icon: const Icon(Icons.calculate, size: 28),
-            label: const Text(
-              'Calculate Overall CGPA',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size.fromHeight(60),
-              backgroundColor: Colors.green,
-              foregroundColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              elevation: 5,
-            ),
-          ),
+          
         ],
       ),
     );
