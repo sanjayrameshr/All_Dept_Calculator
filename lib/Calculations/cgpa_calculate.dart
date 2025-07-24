@@ -6,7 +6,9 @@ class CgpaCalculator {
     double totalWeightedGpa = 0;
 
     if (gpaInputs.length > semesterCredits.length) {
-      throw ArgumentError('Cannot process more than ${semesterCredits.length} semesters.');
+      throw ArgumentError(
+        'Cannot process more than ${semesterCredits.length} semesters.',
+      );
     }
 
     for (int i = 0; i < gpaInputs.length; i++) {

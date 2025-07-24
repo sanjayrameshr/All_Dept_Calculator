@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import '../data/subject_details.dart';
 
 class SemesterPage extends StatelessWidget {
-  final List<Subject> subjects;
+  final List<Subjects> subjects;
   final String title;
 
-  SemesterPage({ required this.subjects, required this.title });
+  SemesterPage({required this.subjects, required this.title});
 
   @override
   Widget build(BuildContext context) {
-    return GpaCalculatorPage( subjects: subjects, title: title);
+    return GpaCalculatorPage(subjects: subjects, title: title);
   }
 }

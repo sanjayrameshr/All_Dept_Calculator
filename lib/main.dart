@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/home.dart';
+import 'department_selection_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,16 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, 
-      title: 'GPA Calculator', 
+      debugShowCheckedModeBanner: false,
+      title: 'GPA Calculator',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple, 
-        appBarTheme: const AppBarTheme(
-          foregroundColor: Colors.white, 
-        ),
-        visualDensity: VisualDensity.adaptivePlatformDensity, 
+        primarySwatch: Colors.deepPurple,
+        appBarTheme: const AppBarTheme(foregroundColor: Colors.white),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const HomePage(),
+      home: const DepartmentSelectionPage(),
     );
   }
 }

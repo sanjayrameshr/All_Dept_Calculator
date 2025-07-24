@@ -1,10 +1,10 @@
-class Subject {
+class Subjects {
   final String code;
   final String name;
   final double credit;
-  String grade = ''; 
+  String grade = '';
 
-Subject({
+  Subjects({
     required this.code,
     required this.name,
     required this.credit,

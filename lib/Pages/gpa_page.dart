@@ -3,7 +3,7 @@ import '../data/subject_details.dart';
 import '../Calculations/gpa_calculator.dart';
 
 class GpaCalculatorPage extends StatefulWidget {
-  final List<Subject> subjects;
+  final List<Subjects> subjects;
   final String title;
 
   GpaCalculatorPage({super.key, required this.subjects, required this.title});
@@ -44,9 +44,13 @@ class _GpaCalculatorPageState extends State<GpaCalculatorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title,
-            style:
-                const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        title: Text(
+          widget.title,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         backgroundColor: Colors.blueAccent,
         elevation: 4,
         centerTitle: true,
@@ -62,13 +66,18 @@ class _GpaCalculatorPageState extends State<GpaCalculatorPage> {
                   final subject = widget.subjects[index];
                   return Card(
                     margin: const EdgeInsets.symmetric(
-                        vertical: 8.0, horizontal: 4.0),
+                      vertical: 8.0,
+                      horizontal: 4.0,
+                    ),
                     elevation: 2,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0)),
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 16.0, vertical: 8.0),
+                        horizontal: 16.0,
+                        vertical: 8.0,
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -80,33 +89,46 @@ class _GpaCalculatorPageState extends State<GpaCalculatorPage> {
                                   subject.name,
 
                                   style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.blueGrey),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.blueGrey,
+                                  ),
                                 ),
                                 const SizedBox(height: 4),
                                 Text(
                                   '${subject.credit} credits',
                                   style: TextStyle(
-                                      fontSize: 14, color: Colors.grey[600]),
+                                    fontSize: 14,
+                                    color: Colors.grey[600],
+                                  ),
                                 ),
                                 Text(
                                   subject.code,
                                   style: const TextStyle(
-                                      fontSize: 14, color: Colors.grey),
+                                    fontSize: 14,
+                                    color: Colors.grey,
+                                  ),
                                 ),
                               ],
                             ),
                           ),
                           const SizedBox(width: 10),
                           DropdownButton<String>(
-                            value: subject.grade.isNotEmpty ? subject.grade : null,
-                            hint: const Text("Grade",
-                                style: TextStyle(color: Colors.blue)),
-                            icon: const Icon(Icons.arrow_drop_down,
-                                color: Colors.blue),
-                            underline:
-                                Container(height: 1, color: Colors.blueAccent),
+                            value: subject.grade.isNotEmpty
+                                ? subject.grade
+                                : null,
+                            hint: const Text(
+                              "Grade",
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_drop_down,
+                              color: Colors.blue,
+                            ),
+                            underline: Container(
+                              height: 1,
+                              color: Colors.blueAccent,
+                            ),
                             items: GpaCalculator.gradeToPoint.keys.map((grade) {
                               return DropdownMenuItem(
                                 value: grade,
@@ -147,18 +169,22 @@ class _GpaCalculatorPageState extends State<GpaCalculatorPage> {
                 ),
                 child: Column(
                   children: [
-                    Text('Your GPA:',
-                        style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.grey[700],
-                            fontWeight: FontWeight.w500)),
+                    Text(
+                      'Your GPA:',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.grey[700],
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                     const SizedBox(height: 8),
                     Text(
                       gpa!.toStringAsFixed(2),
                       style: const TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.w900,
-                          color: Colors.blueAccent),
+                        fontSize: 28,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.blueAccent,
+                      ),
                     ),
                   ],
                 ),
@@ -174,12 +200,15 @@ class _GpaCalculatorPageState extends State<GpaCalculatorPage> {
                       foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 12.0),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0)),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
                       elevation: 3,
                     ),
                     icon: const Icon(Icons.calculate),
-                    label: const Text("Calculate GPA",
-                        style: TextStyle(fontSize: 16)),
+                    label: const Text(
+                      "Calculate GPA",
+                      style: TextStyle(fontSize: 16),
+                    ),
                   ),
                 ),
                 const SizedBox(width: 15),
@@ -191,7 +220,8 @@ class _GpaCalculatorPageState extends State<GpaCalculatorPage> {
                       foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 12.0),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0)),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
                       elevation: 3,
                     ),
                     icon: const Icon(Icons.refresh),
