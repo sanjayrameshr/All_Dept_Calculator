@@ -1,4 +1,4 @@
-import '../data/subject.dart';
+import '../data/subject_details.dart';
 
 class SemData {
   final List<Subject> sem1Subjects = [

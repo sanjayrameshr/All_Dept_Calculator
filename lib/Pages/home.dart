@@ -12,9 +12,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // I Initialize the semester data to be reduce the use of constructor
-    // and to avoid passing data through constructors.
-    final semData = SemData();
+  // I Initialize the semester data to be reduce the use of constructor
+  // and to avoid passing data through constructors.
+    final SemData semData = SemData();
 
     return Scaffold(
       appBar: AppBar(

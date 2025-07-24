@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../data/subject.dart';
+import '../data/subject_details.dart';
 import '../Calculations/gpa_calculator.dart';
 
 class GpaCalculatorPage extends StatefulWidget {

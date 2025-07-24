@@ -1,4 +1,4 @@
-import '../data/subject.dart';
+import '../data/subject_details.dart';
 
 class GpaCalculator {
 

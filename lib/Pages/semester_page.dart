@@ -1,6 +1,6 @@
 import '../pages/gpa_page.dart';
 import 'package:flutter/material.dart';
-import '../data/subject.dart';
+import '../data/subject_details.dart';
 
 class SemesterPage extends StatelessWidget {
   final List<Subject> subjects;
